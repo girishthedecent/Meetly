@@ -1,5 +1,5 @@
 body{
-    background-image: url('../public/galaxy-night-landscape.jpg') ;
+    background-image: url('/galaxy-night-landscape.jpg') ;
 }
 
 
@@ -22,7 +22,7 @@ body{
     position: relative;
     height: 100vh;
     width: 100vw;
-    background-image: url('../public/galaxy-night-landscape.jpg') ;
+    background-image: url('/galaxy-night-landscape.jpg') ;
 }
     
 

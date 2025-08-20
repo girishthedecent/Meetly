@@ -1,7 +1,7 @@
 .landingPageContainer{
   width: 100vw;
   height: 100vh; 
-  background: url('../public/galaxy-night-landscape.jpg');
+  background: url('/galaxy-night-landscape.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
@@ -100,7 +100,7 @@ img{
   display: flex;
   flex-direction: column;
   
-   background: url('../public/galaxy-night-landscape.jpg');
+   background: url('/galaxy-night-landscape.jpg');
 
 }
 .homeIcon{

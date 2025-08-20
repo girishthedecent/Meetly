@@ -8,7 +8,7 @@ let timeLine = {};
   const io = new Server(server,
     {
       cors: {
-        origin: '*',
+        origin: 'https://meetly-mgtt.onrender.com',
         methods: ['GET', 'POST'],
         allowedHeaders: ['*'],
         
