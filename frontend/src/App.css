@@ -1,0 +1,124 @@
+.landingPageContainer{
+  width: 100vw;
+  height: 100vh; 
+  background: url('../public/galaxy-night-landscape.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.landingPageContainer nav {
+  padding-inline: 1.2rem;
+  padding-block: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.landingPageContainer nav h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.landingPageContainer nav .navlist{
+  display: flex;
+  gap: 1.6rem;
+  text-decoration: none !important;
+}
+
+.landingMainContainer{
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 3rem;
+  height: 70vh;
+  align-items: center;
+}
+.cover{
+  margin-top: 2px;
+}
+.landingMainContainer > div:nth-child(1){
+  font-size:1.1rem;
+}
+.landingMainContainer > div:nth-child(1) div{
+  background-color: #d97500;
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 1.4rem;
+  margin-top:8px;
+}
+.landingMainContainer > div:nth-child(1) div[role="button"] a{
+  text-decoration: none;
+  color:white;
+  font-size:1.2rem;
+  
+}
+.landingMainContainer > div:nth-child(2) img{
+  height:70vh;
+  width:auto;
+}
+
+.navBar{
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:10px 20px 20px 20px;
+  
+  
+}
+
+.leftPanel{
+  height:100%;
+  display: flex;
+  gap: 10px;
+  align-items:center;
+  justify-content: right;
+}
+.rightPanel{
+  display: flex;
+  align-items: center;
+  
+}
+
+img{
+  margin-top:10vh ;
+  width:30vw;
+  height: auto;
+}
+
+.meetContainer{
+  display: flex;
+  padding-inline: 20px;
+  height: 80vh;
+  gap:10vw;
+  justify-content: center;
+  
+ 
+}
+
+.history{
+  display: flex;
+  flex-direction: column;
+  
+   background: url('../public/galaxy-night-landscape.jpg');
+
+}
+.homeIcon{
+  height: 3rem;
+  width: 3rem;
+ 
+  margin-left:23px;
+  margin-bottom:10px ;
+}
+
+.card{
+  
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+  border: 1px solid rgba(110, 108, 108, 0.341);
+  border-radius: 10px;
+  box-sizing: border-box;
+  
+}
+ 

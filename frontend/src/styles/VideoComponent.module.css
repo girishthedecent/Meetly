@@ -1,0 +1,113 @@
+body{
+    background-image: url('../public/galaxy-night-landscape.jpg') ;
+}
+
+
+.starting{
+    padding: 2rem 2rem 0 2rem;
+
+    
+    
+    
+}
+.videoStart  video{
+    height: 25rem;
+    width: 25rem;
+   
+    
+   
+}
+
+.meetVideoContainer{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../public/galaxy-night-landscape.jpg') ;
+}
+    
+
+
+
+.meetUserVideo {
+    position: fixed;
+    left: 25px;
+    bottom: 3vh;
+    height:50vh;
+    width: 50vh;
+    border-radius: 50%;
+    object-fit: cover;
+    
+    
+   
+}
+.meetScreenVideo{
+    position: fixed;
+    left: 25px;
+    bottom: 3vh;
+    height:50vh;
+    width: 50vh;
+   
+    
+
+}
+
+.buttonContainers{
+    
+   position: absolute;
+    right: 40vw;
+    bottom: 30px;
+    text-align: center;
+    
+    
+}
+.buttonContainers svg {
+    font-size: 2.5rem;
+    
+   
+    
+}
+
+.conferenceView{
+    display:flex;
+    padding:10px;
+    gap:10px;
+    
+  
+
+}
+
+.conferenceView video{
+    width: 39vw;
+    height: 40vh;
+    min-width: 30vw;
+    border-radius: 20px;
+}
+
+.chatRoom {
+    color:white;
+    position: absolute;
+    right: 10px;
+    top:30px;
+    bottom: 10vh;
+    height: 90vh;
+    width: 25vw;
+    border: 0.4px solid rgba(231, 223, 223, 0.71);
+    border-radius: 10px;
+}
+.chatContainer{
+    position: relative;
+    height:100%;
+}
+
+.chattingArea{
+    position: absolute;
+    bottom:12px;
+    display:flex;
+    justify-content:space-between;
+    padding:10px;
+
+}
+
+.chattingdisplay{
+    margin-left: 10px;
+}
