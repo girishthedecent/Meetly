@@ -1,94 +1,173 @@
-<div align="center">
+# Meetly — Real-Time Video Conferencing Platform
 
-# 🎥 Meetly
+Meetly is a full‑stack real‑time video conferencing web application that enables users to create and join virtual meeting rooms with live video, audio, chat, and screen sharing.
 
-**Secure real-time video conferencing platform**  
-Built with WebRTC, Socket.IO & MERN stack
-
-</div>
+The project focuses on **real‑time communication, system design basics, and WebRTC signaling**, rather than UI-heavy features.
 
 ---
 
-## ✨ About
 
-Meetly is a full-stack real-time video conferencing web application where users can securely authenticate, create or join meeting rooms, and communicate using live video, audio, chat, and screen sharing.
+## ✨ Features
 
-The project focuses on **real-time communication**, **scalable architecture**, and **security-aware backend design**.
-
----
-
-## 🚀 Features
-
-- 🔐 Secure user authentication  
-- 🔑 Join meetings via unique room codes  
-- 🎥 Real-time video & audio (WebRTC)  
-- 💬 Live chat during meetings  
-- 🖥 Screen sharing  
-- 👥 Multiple participants per room  
-
----
-
-## 🔐 Security Overview
-
-- Passwords are **hashed before storage**
-- Authentication-protected routes
-- Secure Socket.IO signaling
-- Media streams handled via **peer-to-peer WebRTC**
-- No video or audio data stored on the server
-- Environment variables used for sensitive configuration
-- CORS configured to restrict unauthorized access
+* User authentication (signup / login)
+* Create and join meeting rooms using unique room IDs
+* Real-time video & audio communication (WebRTC)
+* Live text chat during meetings
+* Screen sharing support
+* Multi-user rooms
+* Secure backend APIs
 
 ---
 
 ## 🛠 Tech Stack
 
-**Frontend**
-- React (Vite)
-- WebRTC
-- Socket.IO Client
+### Frontend
 
-**Backend**
-- Node.js
-- Express.js
-- Socket.IO
-- MongoDB
+* React
+* WebRTC (peer-to-peer media streaming)
+* Socket.IO Client
+* HTML, CSS, JavaScript
 
-**Deployment**
-- Render
+### Backend
+
+* Node.js
+* Express.js
+* Socket.IO (signaling server)
+* MongoDB (users & rooms)
 
 ---
 
+## 🧠 Architecture Overview
+
+Meetly uses **WebRTC for media transfer** and **Socket.IO for signaling**.
+
+**Important:**
+
+* Video and audio streams **do NOT pass through the server**
+* The server is only responsible for signaling and coordination
+
+### Flow
+
+1. User logs in / registers
+2. User creates or joins a room
+3. Client connects to Socket.IO signaling server
+4. Exchange of SDP offers/answers and ICE candidates
+5. Direct peer-to-peer connection established via WebRTC
+6. Media streams flow directly between clients
+
+---
+
+## 🔄 Why Socket.IO is Needed
+
+WebRTC cannot establish connections by itself.
+
+Socket.IO is used to:
+
+* Notify users when someone joins/leaves a room
+* Exchange SDP offers and answers
+* Exchange ICE candidates
+
+Once signaling is complete, Socket.IO is **not involved in media transfer**.
+
+---
+
+## 📁 Project Structure
+
+```
+Meetly/
+│
+├── backend/
+│   ├── controllers/
+│   ├── routes/
+│   ├── models/
+│   ├── socket/
+│   └── server.js
+│
+├── frontend/
+│   ├── src/
+│   ├── components/
+│   └── pages/
+│
+├── screenshots/
+├── README.md
+└── .gitignore
+```
+
+---
 ## 📸 Screenshots
 
-
 <p align="center">
-  <img src="screenshots/start.png" width="80%" alt="Authentication Page" />
-  <br/><br/>
   <img src="screenshots/auth.png" width="80%" alt="Authentication Page" />
   <br/><br/>
-  
-  <img src="screenshots/room.png" width="80%" alt="Room Selection" />
-  <br/><br/>
   <img src="screenshots/meeting.png" width="80%" alt="Meeting Room" />
+  <br/><br/>
+  <img src="screenshots/room.png" width="80%" alt="Room Selection" />
   <br/><br/>
   <img src="screenshots/screen.png" width="80%" alt="Screen Sharing" />
 </p>
 
 ---
 
-## ⚙️ Run Locally
+## 🚀 Getting Started (Local Setup)
+
+### Prerequisites
+
+* Node.js
+* MongoDB
+* npm
+
+### Clone the Repository
 
 ```bash
-# Clone repository
 git clone https://github.com/girishthedecent/Meetly.git
 cd Meetly
+```
 
-# Backend
-cd server
+### Backend Setup
+
+```bash
+cd backend
 npm install
 npm start
+```
 
-# Frontend
-cd client
+### Frontend Setup
+
+```bash
+cd frontend
 npm install
 npm run dev
+```
+
+---
+
+## 🔐 Security Notes
+
+* Passwords are hashed before storing
+* Backend routes are protected
+* Media streams are peer-to-peer and not stored
+
+---
+
+## 📌 Limitations & Future Improvements
+
+* No TURN server (may fail behind strict NATs)
+* Limited testing for large number of participants
+* UI can be improved
+* Recording meetings (future scope)
+
+---
+
+## 🎯 What This Project Demonstrates
+
+* Understanding of real-time systems
+* Practical use of WebRTC
+* Client–server communication
+* Socket-based signaling design
+* Full-stack development skills
+
+---
+
+## 📄 License
+
+MIT
