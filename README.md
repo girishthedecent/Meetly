@@ -14,6 +14,7 @@ The project focuses on **real‑time communication, system design basics, and We
 * Real-time video & audio communication (WebRTC)
 * Live text chat during meetings
 * Screen sharing support
+* Chat History Persistence
 * Multi-user rooms
 * Secure backend APIs
 
