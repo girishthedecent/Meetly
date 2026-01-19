@@ -1,4 +1,5 @@
 # Meetly — Real-Time Video Conferencing Platform
+**Live URL:** [https://meetly-mgtt.onrender.com](https://meetly-mgtt.onrender.com)
 
 Meetly is a full‑stack real‑time video conferencing web application that enables users to create and join virtual meeting rooms with live video, audio, chat, and screen sharing.
 
