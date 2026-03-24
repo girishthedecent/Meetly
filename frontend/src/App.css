@@ -1,124 +1,266 @@
-.landingPageContainer{
-  width: 100vw;
-  height: 100vh; 
-  background: url('/galaxy-night-landscape.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+.landingPageContainer {
+  min-height: 100vh;
+  width: 100%;
+  background: url('/galaxy-night-landscape.jpg') center/cover no-repeat;
   color: white;
 }
 
 .landingPageContainer nav {
-  padding-inline: 1.2rem;
-  padding-block: 1.6rem;
+  padding: 1.25rem clamp(1rem, 3vw, 2rem);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .landingPageContainer nav h2 {
-  font-size: 1.8rem;
+  font-size: clamp(1.6rem, 4vw, 1.8rem);
   font-weight: 500;
 }
 
-.landingPageContainer nav .navlist{
+.landingPageContainer nav .navlist {
   display: flex;
-  gap: 1.6rem;
-  text-decoration: none !important;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
-.landingMainContainer{
-  display: flex;
-  justify-content: space-between;
-  padding-inline: 3rem;
-  height: 70vh;
-  align-items: center;
-}
-.cover{
-  margin-top: 2px;
-}
-.landingMainContainer > div:nth-child(1){
-  font-size:1.1rem;
-}
-.landingMainContainer > div:nth-child(1) div{
-  background-color: #d97500;
-  width: fit-content;
-  padding: 1rem;
-  border-radius: 1.4rem;
-  margin-top:8px;
-}
-.landingMainContainer > div:nth-child(1) div[role="button"] a{
-  text-decoration: none;
-  color:white;
-  font-size:1.2rem;
-  
-}
-.landingMainContainer > div:nth-child(2) img{
-  height:70vh;
-  width:auto;
-}
-
-.navBar{
-  
+.landingMainContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:10px 20px 20px 20px;
-  
-  
+  gap: clamp(2rem, 5vw, 4rem);
+  padding: 2rem clamp(1rem, 4vw, 3rem) 3rem;
+  min-height: calc(100vh - 96px);
 }
 
-.leftPanel{
-  height:100%;
-  display: flex;
-  gap: 10px;
-  align-items:center;
-  justify-content: right;
+.landingCopy {
+  flex: 1 1 320px;
+  max-width: 38rem;
+  font-size: 1.1rem;
 }
-.rightPanel{
-  display: flex;
+
+.landingCopy h1 {
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  line-height: 1.05;
+}
+
+.cover {
+  margin-top: 0.6rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+.landingCta {
+  display: inline-flex;
   align-items: center;
-  
-}
-
-img{
-  margin-top:10vh ;
-  width:30vw;
-  height: auto;
-}
-
-.meetContainer{
-  display: flex;
-  padding-inline: 20px;
-  height: 80vh;
-  gap:10vw;
   justify-content: center;
-  
- 
+  margin-top: 1.25rem;
+  background-color: #d97500;
+  padding: 0.95rem 1.2rem;
+  border-radius: 1.25rem;
 }
 
-.history{
+.landingCta a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.landingVisual {
+  flex: 1 1 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.landingVisual img {
+  width: min(100%, 26rem);
+  max-height: 70vh;
+  height: auto;
+  margin-top: 0;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1rem clamp(1rem, 3vw, 2rem);
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.historyTrigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.meetContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(2rem, 6vw, 5rem);
+  padding: 1rem clamp(1rem, 4vw, 3rem) 3rem;
+  min-height: calc(100vh - 88px);
+}
+
+.leftPanel {
+  flex: 1 1 320px;
   display: flex;
   flex-direction: column;
-  
-   background: url('/galaxy-night-landscape.jpg');
-
-}
-.homeIcon{
-  height: 3rem;
-  width: 3rem;
- 
-  margin-left:23px;
-  margin-bottom:10px ;
+  gap: 1.25rem;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-.card{
-  
-  padding: 20px;
-  margin: 20px;
-  width: 300px;
+.leftPanel h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.1;
+}
+
+.meetingForm {
+  display: flex;
+  gap: 0.75rem;
+  width: min(100%, 32rem);
+  align-items: stretch;
+}
+
+.meetingForm .MuiFormControl-root {
+  flex: 1 1 auto;
+}
+
+.rightPanel {
+  flex: 1 1 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightPanel img {
+  width: min(100%, 30rem);
+  height: auto;
+  margin-top: 0;
+}
+
+.history {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  align-content: start;
+  gap: 1rem;
+  padding: 1rem clamp(1rem, 4vw, 2rem) 2rem;
+  background: url('/galaxy-night-landscape.jpg') center/cover no-repeat;
+}
+
+.historyHeader {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.homeIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.card {
+  width: 100%;
+  min-width: 0;
+  padding: 1.25rem;
   border: 1px solid rgba(110, 108, 108, 0.341);
   border-radius: 10px;
-  box-sizing: border-box;
-  
+  background: rgba(7, 10, 24, 0.45);
+  backdrop-filter: blur(4px);
 }
- 
+
+.card h2,
+.card h4 {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+  .landingMainContainer,
+  .meetContainer {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .landingCopy,
+  .leftPanel,
+  .landingVisual,
+  .rightPanel {
+    width: 100%;
+    max-width: none;
+  }
+
+  .landingVisual {
+    order: -1;
+  }
+
+  .landingVisual img,
+  .rightPanel img {
+    width: min(100%, 22rem);
+    max-height: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .landingPageContainer nav {
+    justify-content: center;
+  }
+
+  .landingPageContainer nav .navlist,
+  .navActions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .landingMainContainer,
+  .meetContainer {
+    padding-inline: 1rem;
+  }
+
+  .landingCopy {
+    text-align: center;
+  }
+
+  .landingCta {
+    width: 100%;
+  }
+
+  .meetingForm {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .meetingForm button {
+    width: 100%;
+  }
+
+  .leftPanel {
+    align-items: stretch;
+  }
+
+  .leftPanel h2 {
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
+    text-align: center;
+  }
+
+  .navBar {
+    justify-content: center;
+  }
+
+  .history {
+    grid-template-columns: 1fr;
+  }
+}
