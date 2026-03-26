@@ -29,7 +29,7 @@ app.set("port",(process.env.PORT||3000))
 
 
 app.use(cors({
-  origin: "https://meetly-mgtt.onrender.com", 
+  origin: process.env.FRONTEND, 
 }));
 app.use(express.json({limit:"40kb"}));
 app.use(express.urlencoded({limit:"40kb",extended:true}));
@@ -50,7 +50,7 @@ app.use("/api/v1/users",userRoutes);
 
 const start = async () => {
     app.set("mongo_user")
-    const connectionDb=await mongoose.connect("mongodb+srv://girishthedecnt:7jdtwL2wXtiJHg0v@cluster0.qa8wbbq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+    const connectionDb=await mongoose.connect(process.env.MONGO)
     console.log(`connected to db ${connectionDb.connection.host}`);
 
     server.listen(app.get("port"), () => {
